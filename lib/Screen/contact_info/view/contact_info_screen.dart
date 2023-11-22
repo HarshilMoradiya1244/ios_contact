@@ -135,7 +135,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "mobile",
+                            "mobilee",
                             style: TextStyle(fontSize: 15, color: Colors.black),
                           ),
                           Text(
