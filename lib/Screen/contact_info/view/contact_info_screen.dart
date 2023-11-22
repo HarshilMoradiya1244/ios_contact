@@ -66,16 +66,16 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey.shade300,
+                      color: Colors.white,
                     ),
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          CupertinoIcons.photo,
-                          color: Colors.white,
+                          CupertinoIcons.ellipses_bubble,
+                          color: Colors.black,
                         ),
-                        Text("Message"),
+                        Text("Message",style: TextStyle(color: Colors.black),),
                       ],
                     ),
                   ),
@@ -84,16 +84,16 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey.shade300,
+                      color: Colors.white,
                     ),
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           CupertinoIcons.phone_fill,
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
-                        Text("Call"),
+                        Text("Call",style: TextStyle(color: Colors.black),),
                       ],
                     ),
                   ),
@@ -102,16 +102,16 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey.shade300,
+                      color: Colors.white,
                     ),
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           CupertinoIcons.mail_solid,
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
-                        Text("Mail"),
+                        Text("Mail",style: TextStyle(color: Colors.black),),
                       ],
                     ),
                   ),

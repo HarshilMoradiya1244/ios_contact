@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return  CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         leading: Row(
           children: [
             Icon(CupertinoIcons.back),
@@ -32,10 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Align(
+              const Align(
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Contacts",
@@ -44,26 +44,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CupertinoSearchTextField(
+              const CupertinoSearchTextField(
                 placeholder: 'Search',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "A",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )),
+                  const Text(
+                    "A",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const Divider(
                     thickness: 1,
                   ),
@@ -87,15 +86,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   //
-                  const Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "B",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )),
+                  const Text(
+                    "B",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const Divider(
                     thickness: 1,
                   ),
@@ -119,15 +116,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   //
-                  const Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "H",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )),
+                  const Text(
+                    "H",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const Divider(
                     thickness: 1,
                   ),
@@ -167,15 +162,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   //
-                  const Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "T",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )),
+                  const Text(
+                    "T",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const Divider(
                     thickness: 1,
                   ),
@@ -199,15 +192,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   //
-                  const Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "Z",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      )),
+                  const Text(
+                    "Z",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                   const Divider(
                     thickness: 1,
                   ),
@@ -230,7 +221,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-
                 ],
               )
             ],
