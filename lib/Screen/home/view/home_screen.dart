@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return  CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         leading: Row(
           children: [
@@ -64,25 +64,30 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "John AppleSeeds",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: CupertinoListTile(
+                      title: Text(
+                        "John AppleSeeds",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //
-                  Align(
+                  const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "B",
@@ -91,25 +96,30 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "Kate Bell",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: const CupertinoListTile(
+                      title: Text(
+                        "Kate Bell",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //
-                  Align(
+                  const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "H",
@@ -118,36 +128,46 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "Annna Haro",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: const CupertinoListTile(
+                      title: Text(
+                        "Annna Haro",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "Danniel Hinggis Jr",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: const CupertinoListTile(
+                      title: Text(
+                        "Danniel Hinggis Jr",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //
-                  Align(
+                  const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "T",
@@ -156,25 +176,30 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "Davis Taylor ",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: const CupertinoListTile(
+                      title: Text(
+                        "Davis Taylor ",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //
-                  Align(
+                  const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "Z",
@@ -183,21 +208,26 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  CupertinoListTile(
-                    title: Text(
-                      "Hark M Zakroff",
-                      style: TextStyle(
-                        color: Colors.black,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, 'info');
+                    },
+                    child: const CupertinoListTile(
+                      title: Text(
+                        "Hark M Zakroff",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     thickness: 1,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
 

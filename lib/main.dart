@@ -7,8 +7,8 @@ void main() {
     CupertinoApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        // '/':(p0) =>HomeScreen(),
-        '/':(p0) => ContactInfoscreen(),
+        '/':(p0) =>HomeScreen(),
+        'info':(p0) => ContactInfoscreen(),
       },
     )
   );

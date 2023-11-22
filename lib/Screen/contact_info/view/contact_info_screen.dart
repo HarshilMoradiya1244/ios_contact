@@ -12,17 +12,19 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
+      navigationBar:  CupertinoNavigationBar(
         leading: Row(
           children: [
-            Icon(CupertinoIcons.back),
-            Text(
+            GestureDetector(   onTap: (){
+              Navigator.pop(context, 'info');
+            },child: const Icon(CupertinoIcons.back)),
+            const Text(
               "Contact",
               style: TextStyle(color: Colors.blue),
             ),
           ],
         ),
-        trailing: Text("Edit", style: TextStyle(color: Colors.blue)),
+        trailing: const Text("Edit", style: TextStyle(color: Colors.blue)),
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
         backgroundColor: Colors.white,
       ),
@@ -70,7 +72,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          Icons.message,
+                          CupertinoIcons.photo,
                           color: Colors.white,
                         ),
                         Text("Message"),
@@ -88,7 +90,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          Icons.call,
+                          CupertinoIcons.phone_fill,
                           color: Colors.white,
                         ),
                         Text("Call"),
@@ -106,7 +108,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          Icons.mail,
+                          CupertinoIcons.mail_solid,
                           color: Colors.white,
                         ),
                         Text("Mail"),
