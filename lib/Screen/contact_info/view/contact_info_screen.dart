@@ -28,7 +28,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
         backgroundColor: Colors.white,
       ),
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade100,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -65,15 +65,15 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     height: MediaQuery.sizeOf(context).height * 0.08,
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                     ),
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          CupertinoIcons.ellipses_bubble,
-                          color: Colors.black,
+                          CupertinoIcons.ellipses_bubble_fill,
+                          color: Colors.blue,
                         ),
                         Text("Message",style: TextStyle(color: Colors.black),),
                       ],
@@ -83,7 +83,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     height: MediaQuery.sizeOf(context).height * 0.08,
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                     ),
                     child: const Column(
@@ -91,7 +91,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                       children: [
                         Icon(
                           CupertinoIcons.phone_fill,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Text("Call",style: TextStyle(color: Colors.black),),
                       ],
@@ -101,7 +101,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     height: MediaQuery.sizeOf(context).height * 0.08,
                     width: MediaQuery.sizeOf(context).width * 0.25,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.white,
                     ),
                     child: const Column(
@@ -109,7 +109,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                       children: [
                         Icon(
                           CupertinoIcons.mail_solid,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Text("Mail",style: TextStyle(color: Colors.black),),
                       ],
@@ -191,7 +191,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                             style: TextStyle(fontSize: 15, color: Colors.black),
                           ),
                           Text(
-                            "John-AppleSeed@mac.com",
+                            "John-AppleSeeds@mac.com",
                             style: TextStyle(fontSize: 20, color: Colors.blue),
                           )
                         ],
@@ -224,7 +224,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 15,
               ),
               Container(
                 height: MediaQuery.sizeOf(context).height * 0.15,
