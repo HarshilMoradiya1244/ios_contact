@@ -5,7 +5,7 @@ import 'package:ios_contact/utils/app_routes.dart';
 
 void main() {
   runApp(
-   Platform.isAndroid ? MaterialApp(
+   Platform.isIOS ? MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: screen_routes_android
     ):

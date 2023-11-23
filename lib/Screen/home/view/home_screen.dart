@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ios_contact/Screen/home/provider/home_screen_provder.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,10 +11,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  HomeProvider? ProviderR;
+  HomeProvider? ProviderW;
   @override
   Widget build(BuildContext context) {
-    return  CupertinoPageScaffold(
-      navigationBar:  CupertinoNavigationBar(
+    ProviderR = context.read<HomeProvider>();
+    ProviderW = context.watch<HomeProvider>();
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
         leading: const Row(
           children: [
             Icon(CupertinoIcons.back),
@@ -22,31 +28,67 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        trailing: GestureDetector(
-          onTap: (){
-            showCupertinoModalPopup(context: context, builder: (context) =>
-
-                CupertinoActionSheet(
-                  actions: [
-                    CupertinoActionSheetAction(
-                      isDestructiveAction: true,
-                      onPressed: () {},
-                      isDefaultAction: true,
-                      child: const Text("Add Contact",style: TextStyle(color: CupertinoColors.link),),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            GestureDetector(
+                onTap: () {
+                  showCupertinoModalPopup(
+                    context: context,
+                    builder: (context) => CupertinoActionSheet(
+                      actions: [
+                        CupertinoActionSheetAction(
+                          isDestructiveAction: true,
+                          onPressed: () {},
+                          isDefaultAction: true,
+                          child: const Text(
+                            "Add Contact",
+                            style: TextStyle(color: CupertinoColors.link),
+                          ),
+                        ),
+                        CupertinoActionSheetAction(
+                          isDestructiveAction: true,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          isDefaultAction: false,
+                          child: const Text(
+                            "Cancel",
+                            style: TextStyle(color: CupertinoColors.link),
+                          ),
+                        ),
+                      ],
                     ),
-                    CupertinoActionSheetAction(
-                      isDestructiveAction: true,
-                      onPressed: () {
-                        Navigator.pop(context);
+                  );
+                },
+                child: const Icon(CupertinoIcons.add)),
+            const SizedBox(
+              width: 10,
+            ),
+            GestureDetector(
+                onTap: () {}, child: Icon(Icons.more_vert_outlined)),
+            CupertinoButton(
+                child: Text("${ProviderW!.date}"),
+                onPressed: () {
+                showCupertinoDialog(
+                  context: context,
+                  builder:(context) {
+                    return CupertinoDatePicker(
+                      onDateTimeChanged: (value){
+                        ProviderR!.changeDate(value);
                       },
-                      isDefaultAction: false,
-                      child: const Text("Cancel",style: TextStyle(color: CupertinoColors.link),),
-                    ),
-                  ],
-                ),
-              );
-          },
-            child: const Icon(CupertinoIcons.add)),
+                      maximumDate: DateTime(2001),
+                      maximumYear: 2001,
+                      minimumDate: DateTime(2050),
+                      minimumYear: 2050,
+                      initialDateTime: ProviderW!.date,
+                    );
+                  },
+                );
+                })
+          ],
+        ),
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
         backgroundColor: Colors.white,
       ),
@@ -91,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
@@ -121,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
@@ -151,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
@@ -167,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
@@ -197,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
@@ -227,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, 'info');
                     },
                     child: const CupertinoListTile(
