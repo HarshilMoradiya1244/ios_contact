@@ -38,7 +38,9 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                       width: 10,
                     ),
                     IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.more_vert)),
+                        onPressed: () {
+                            Navigator.pushNamed(context, 'info');
+                        }, icon: const Icon(Icons.more_vert)),
                   ],
                 ),
               ),
@@ -62,237 +64,232 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, 'info');
-                },
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
+                          height: MediaQuery.sizeOf(context).height * 0.15,
+                          width: MediaQuery.sizeOf(context).width * 0.15,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.orange,
+                          ),
+                          child: const Icon(
+                            Icons.person,
+                            size: 40,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Shubhman Gill",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
+                          height: MediaQuery.sizeOf(context).height * 0.15,
+                          width: MediaQuery.sizeOf(context).width * 0.15,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.yellow,
+                          ),
+                          child: const Icon(
+                            Icons.person,
+                            size: 40,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Rohit Sharma",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
                             height: MediaQuery.sizeOf(context).height * 0.15,
                             width: MediaQuery.sizeOf(context).width * 0.15,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.orange,
+                              color: Colors.purple,
                             ),
-                            child: const Icon(
-                              Icons.person,
-                              size: 40,
-                            ),
+                            child: const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "V",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ))),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Virat Kohli",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
+                          height: MediaQuery.sizeOf(context).height * 0.15,
+                          width: MediaQuery.sizeOf(context).width * 0.15,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.pink,
+                          ),
+                          child: const Icon(
+                            Icons.person,
+                            size: 40,
                           ),
                         ),
-                        const SizedBox(
-                          width: 15,
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Shreyas Iyer",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
+                          height: MediaQuery.sizeOf(context).height * 0.15,
+                          width: MediaQuery.sizeOf(context).width * 0.15,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue,
+                          ),
+                          child: const Icon(
+                            Icons.person,
+                            size: 40,
+                          ),
                         ),
-                        const Text(
-                          "Shubhman Gill",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "KL Rahul",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
                             height: MediaQuery.sizeOf(context).height * 0.15,
                             width: MediaQuery.sizeOf(context).width * 0.15,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.yellow,
+                              color: Colors.red,
                             ),
-                            child: const Icon(
-                              Icons.person,
-                              size: 40,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Rohit Sharma",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
-                              height: MediaQuery.sizeOf(context).height * 0.15,
-                              width: MediaQuery.sizeOf(context).width * 0.15,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.purple,
-                              ),
-                              child: const Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "V",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ))),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Virat Kohli",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
+                            child: const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "M",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ))),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Ms Dhoni",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
                             height: MediaQuery.sizeOf(context).height * 0.15,
                             width: MediaQuery.sizeOf(context).width * 0.15,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.pink,
+                              color: Colors.yellowAccent,
                             ),
-                            child: const Icon(
-                              Icons.person,
-                              size: 40,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Shreyas Iyer",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
+                            child: const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "M",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ))),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Mohammad Shami",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 60,
+                        child: Container(
                             height: MediaQuery.sizeOf(context).height * 0.15,
                             width: MediaQuery.sizeOf(context).width * 0.15,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.blue,
+                              color: Colors.orangeAccent,
                             ),
-                            child: const Icon(
-                              Icons.person,
-                              size: 40,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "KL Rahul",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
-                              height: MediaQuery.sizeOf(context).height * 0.15,
-                              width: MediaQuery.sizeOf(context).width * 0.15,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.red,
-                              ),
-                              child: const Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "M",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ))),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Ms Dhoni",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
-                              height: MediaQuery.sizeOf(context).height * 0.15,
-                              width: MediaQuery.sizeOf(context).width * 0.15,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.yellowAccent,
-                              ),
-                              child: const Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "M",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ))),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Mohammad Shami",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: Container(
-                              height: MediaQuery.sizeOf(context).height * 0.15,
-                              width: MediaQuery.sizeOf(context).width * 0.15,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.orangeAccent,
-                              ),
-                              child: const Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "M",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ))),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Mohammad Siraj",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        const SizedBox(
-                          width: 35,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                            child: const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "M",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ))),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      const Text(
+                        "Mohammad Siraj",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      const SizedBox(
+                        width: 35,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -369,7 +366,7 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                 alignment: Alignment.centerRight,
                 child: FloatingActionButton(
                   backgroundColor: Colors.orange.shade200,
-                    onPressed: () {}, child: const Icon(Icons.dialpad_outlined)))),
+                    onPressed: () {}, child: const Icon(Icons.dialpad_outlined,color: Colors.black,)))),
       ),
     );
   }
