@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       backgroundColor: Colors.white,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: (){
                       Navigator.pushNamed(context, 'info');
                     },
-                    child: CupertinoListTile(
+                    child: const CupertinoListTile(
                       title: Text(
                         "John AppleSeeds",
                         style: TextStyle(

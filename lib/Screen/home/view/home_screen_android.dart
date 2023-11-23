@@ -324,18 +324,18 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                               context: context,
                               builder: (context) => BottomSheet(
                                 onClosing: () {},
-                                builder: (context) => Container(
+                                builder: (context) => SizedBox(
                                   height: 100,
                                   width: double.infinity,
                                   child: Column(
                                     children: [
                                       ElevatedButton(
                                         onPressed: () {},
-                                        child: Text("Video Call"),
+                                        child: const Text("Video Call"),
                                       ),
                                       ElevatedButton(
                                         onPressed: () {},
-                                        child: Text("Voice Call"),
+                                        child: const Text("Voice Call"),
                                       ),
                                     ],
                                   ),
@@ -369,7 +369,7 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                 alignment: Alignment.centerRight,
                 child: FloatingActionButton(
                   backgroundColor: Colors.orange.shade200,
-                    onPressed: () {}, child: Icon(Icons.dialpad_outlined)))),
+                    onPressed: () {}, child: const Icon(Icons.dialpad_outlined)))),
       ),
     );
   }

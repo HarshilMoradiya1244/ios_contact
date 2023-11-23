@@ -68,7 +68,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                         child: IconButton(onPressed: (){},icon: const Icon(Icons.message_outlined,color: Colors.white,),),
                       ),
                     ),
-                    Text("Message"),
+                    const Text("Message"),
                   ],
                 ),
                 Column(
@@ -81,10 +81,10 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                             shape: BoxShape.circle,
                             color: Colors.grey.shade400
                         ),
-                        child: IconButton(onPressed: (){},icon: Icon(Icons.videocam_outlined,color: Colors.white,),),
+                        child: IconButton(onPressed: (){},icon: const Icon(Icons.videocam_outlined,color: Colors.white,),),
                       ),
                     ),
-                    Text("Video"),
+                    const Text("Video"),
                   ],
                 )
               ],
@@ -108,7 +108,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                       children: [
                         IconButton(onPressed: (){}, icon: Icon(Icons.phone_outlined)),
                         const SizedBox(width: 10,),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("+91 1234567890"),
@@ -116,35 +116,35 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                           ],
                         ),
                         const SizedBox(width: 60,),
-                        IconButton(onPressed: (){},icon: Icon(Icons.videocam_outlined,),),
+                        IconButton(onPressed: (){},icon: const Icon(Icons.videocam_outlined,),),
                         IconButton(onPressed: (){},icon: const Icon(Icons.message_outlined,),),
                       ],
                     ),
                     Row(
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(Icons.perm_phone_msg_outlined),),
+                        IconButton(onPressed: (){}, icon: const Icon(Icons.perm_phone_msg_outlined),),
                         const SizedBox(width: 10,),
-                        Text("Message",style: TextStyle(fontSize: 17),),
+                        const Text("Message",style: TextStyle(fontSize: 17),),
                         const SizedBox(width: 10,),
-                        Text("+91 1234567890"),
+                        const Text("+91 1234567890"),
                       ],
                     ),
                     Row(
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(Icons.phone_in_talk_outlined),),
+                        IconButton(onPressed: (){}, icon: const Icon(Icons.phone_in_talk_outlined),),
                         const SizedBox(width: 10,),
-                        Text("Voice Call",style: TextStyle(fontSize: 17),),
+                        const Text("Voice Call",style: TextStyle(fontSize: 17),),
                         const SizedBox(width: 10,),
-                        Text("+91 1234567890"),
+                        const Text("+91 1234567890"),
                       ],
                     ),
                     Row(
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(Icons.videocam_outlined),),
+                        IconButton(onPressed: (){}, icon: const Icon(Icons.videocam_outlined),),
                         const SizedBox(width: 10,),
-                        Text("Video Call",style: TextStyle(fontSize: 17),),
+                        const Text("Video Call",style: TextStyle(fontSize: 17),),
                         const SizedBox(width: 10,),
-                        Text("+91 1234567890"),
+                        const Text("+91 1234567890"),
                       ],
                     ),
                   ],
