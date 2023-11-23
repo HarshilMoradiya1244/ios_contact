@@ -12,8 +12,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return  CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        leading: Row(
+      navigationBar:  CupertinoNavigationBar(
+        leading: const Row(
           children: [
             Icon(CupertinoIcons.back),
             Text(
@@ -22,7 +22,31 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        trailing: Icon(CupertinoIcons.add),
+        trailing: GestureDetector(
+          onTap: (){
+            showCupertinoModalPopup(context: context, builder: (context) =>
+
+                CupertinoActionSheet(
+                  actions: [
+                    CupertinoActionSheetAction(
+                      isDestructiveAction: true,
+                      onPressed: () {},
+                      isDefaultAction: true,
+                      child: const Text("Add Contact",style: TextStyle(color: CupertinoColors.link),),
+                    ),
+                    CupertinoActionSheetAction(
+                      isDestructiveAction: true,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      isDefaultAction: false,
+                      child: const Text("Cancel",style: TextStyle(color: CupertinoColors.link),),
+                    ),
+                  ],
+                ),
+              );
+          },
+            child: const Icon(CupertinoIcons.add)),
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
         backgroundColor: Colors.white,
       ),

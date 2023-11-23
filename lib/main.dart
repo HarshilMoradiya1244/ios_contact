@@ -11,15 +11,15 @@ void main() {
    Platform.isAndroid ? MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => HomeScreenAndroid(),
-        'info':(context) => ContactInfoScreenAndroid(),
+        '/':(context) => const HomeScreenAndroid(),
+        'info':(context) => const ContactInfoScreenAndroid(),
       },
     ):
     CupertinoApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(p0) =>HomeScreen(),
-        'info':(p0) => ContactInfoscreen(),
+        '/':(p0) =>const HomeScreen(),
+        'info':(p0) => const ContactInfoscreen(),
       },
      )
   );
