@@ -8,7 +8,6 @@ class HomeScreenAndroid extends StatefulWidget {
 }
 
 class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -89,12 +88,10 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                         const SizedBox(
                           width: 15,
                         ),
-                        Builder(builder: (context) {
-                          return const Text(
-                            "Shubhman Gill",
-                            style: TextStyle(fontSize: 20),
-                          );
-                        }),
+                        const Text(
+                          "Shubhman Gill",
+                          style: TextStyle(fontSize: 20),
+                        ),
                       ],
                     ),
                     Row(
@@ -292,20 +289,6 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                         const SizedBox(
                           width: 35,
                         ),
-                        Container(
-                          height: MediaQuery.sizeOf(context).height * 0.09,
-                          width: MediaQuery.sizeOf(context).width * 0.2,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: Colors.orange.shade300),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.dialpad_outlined,
-                              size: 35,
-                            ),
-                          ),
-                        )
                       ],
                     ),
                   ],
@@ -313,10 +296,10 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 19,
             ),
             Container(
-              height: MediaQuery.sizeOf(context).height * 0.11,
+              height: MediaQuery.sizeOf(context).height * 0.12,
               width: MediaQuery.sizeOf(context).width,
               decoration: BoxDecoration(color: Colors.grey.shade300),
               child: Padding(
@@ -380,6 +363,13 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
             ),
           ],
         ),
+        floatingActionButton: SizedBox(
+            height: 300,
+            child: Align(
+                alignment: Alignment.centerRight,
+                child: FloatingActionButton(
+                  backgroundColor: Colors.orange.shade200,
+                    onPressed: () {}, child: Icon(Icons.dialpad_outlined)))),
       ),
     );
   }
