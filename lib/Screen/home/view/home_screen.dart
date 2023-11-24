@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },),
                       ),
                     );
-                  },child: Icon(CupertinoIcons.time))
+                  },child: Icon(CupertinoIcons.time)),
                   ]),
               const SizedBox(
                 height: 20,
