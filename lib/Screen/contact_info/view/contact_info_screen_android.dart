@@ -32,7 +32,8 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                   }, icon: const Icon(Icons.arrow_back, color: Colors.black,),),
                   const SizedBox(width: 140,),
                   IconButton(onPressed: () {},
-                    icon: const Icon(Icons.edit_outlined, color: Colors.black,),),
+                    icon: const Icon(
+                      Icons.edit_outlined, color: Colors.black,),),
                   IconButton(onPressed: () {},
                     icon: const Icon(
                       Icons.star_border_outlined, color: Colors.black,),),
@@ -144,7 +145,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                       const SizedBox(height: 20,),
                       Row(
                         children: [
-                          IconButton(onPressed: () {}, icon: Icon(
+                          IconButton(onPressed: () {}, icon: const Icon(
                               Icons.phone_outlined)),
                           const SizedBox(width: 10,),
                           const Column(
@@ -166,7 +167,8 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                           IconButton(onPressed: () {}, icon: const Icon(
                               Icons.perm_phone_msg_outlined),),
                           const SizedBox(width: 10,),
-                          const Text("Message", style: TextStyle(fontSize: 17),),
+                          const Text(
+                            "Message", style: TextStyle(fontSize: 17),),
                           const SizedBox(width: 10,),
                           const Text("+91 1234567890"),
                         ],
@@ -196,10 +198,13 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                       Row(
                         children: [
                           const Padding(padding: EdgeInsets.all(10)),
-                          Text("Date : ${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!.date?.year}",style: const TextStyle(fontSize: 18),),
+                          Text("Date : ${ProviderR!.date?.day}/${ProviderR!.date
+                              ?.month}/${ProviderR!.date?.year}",
+                            style: const TextStyle(fontSize: 18),),
                           const Spacer(),
                           IconButton(onPressed: () async {
-                            DateTime? d1 = await showDatePicker(context: context,
+                            DateTime? d1 = await showDatePicker(
+                                context: context,
                                 initialDate: ProviderR!.date!,
                                 firstDate: DateTime(2001),
                                 lastDate: DateTime(2050));
@@ -207,12 +212,20 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                           }, icon: const Icon(Icons.calendar_month))
                         ],
                       ),
-                       Row(
+                      Row(
                         children: [
                           const Padding(padding: EdgeInsets.all(10)),
-                          const Text("Time : mm:ss:hh",style: TextStyle(fontSize: 18),),
+                          Text(
+                            "Time : ${ProviderR!.time!.hour}:${ProviderW!.time!
+                                .minute}",
+                            style: TextStyle(fontSize: 18),),
                           const Spacer(),
-                          IconButton(onPressed: (){}, icon: const Icon(Icons.timer_outlined))
+                          IconButton(onPressed: () async {
+                           TimeOfDay? d2 = await showTimePicker(
+                                context: context,
+                               initialTime: ProviderR!.time!);
+                            ProviderR!.changeTime(d2!);
+                          }, icon: const Icon(Icons.timer_outlined),),
                         ],
                       )
                     ],

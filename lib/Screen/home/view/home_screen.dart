@@ -91,9 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Spacer(),
-              Text("${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}"),
+              Text("Time : ${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}"),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
                   GestureDetector(onTap: (){
                     showCupertinoModalPopup(context: context,
@@ -106,11 +106,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             use24hFormat: true,
                             onDateTimeChanged: (value) {
                               ProviderR!.changeTime(value);
-
                             },),
                       ),
                     );
-                  },child: Icon(CupertinoIcons.time)),
+                  },child: const Icon(CupertinoIcons.time)),
                   ]),
               const SizedBox(
                 height: 20,
