@@ -18,7 +18,7 @@ void main() {
           create: (context) => ContactInfoProvider(),
         )
       ],
-      child:  Platform.isAndroid? MaterialApp(
+      child:  Platform.isIOS? MaterialApp(
           debugShowCheckedModeBanner: false,
           routes: screen_routes_android
       ):

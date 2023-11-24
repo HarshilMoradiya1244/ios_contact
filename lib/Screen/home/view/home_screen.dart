@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Spacer(),
-              Text("Time : ${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}"),
+              Text("Time : ${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}",style: TextStyle(color: Colors.black),),
               const SizedBox(
                 height: 20,
               ),
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       builder:(context) => SizedBox(
                         height: 200,
                         child: CupertinoDatePicker(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Colors.grey.shade500,
                             initialDateTime: ProviderR!.time,
                             mode: CupertinoDatePickerMode.time,
                             use24hFormat: true,
