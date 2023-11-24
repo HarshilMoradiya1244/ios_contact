@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text(
                 "${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!
-                    .date?.year}"),
+                    .date?.year}",style: const TextStyle(color: Colors.black),),
             const SizedBox(
               width: 10,
             ),
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 200,
                           child: CupertinoDatePicker(
                             initialDateTime: ProviderR!.date,
-                            backgroundColor: Colors.white,
+                            backgroundColor: Colors.grey.shade500,
                             onDateTimeChanged: (value) {
                               ProviderR!.changeDate(value);
                             },
