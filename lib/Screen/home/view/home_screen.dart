@@ -13,12 +13,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   HomeProvider? ProviderR;
   HomeProvider? ProviderW;
+
   @override
   Widget build(BuildContext context) {
     ProviderR = context.read<HomeProvider>();
     ProviderW = context.watch<HomeProvider>();
     return CupertinoPageScaffold(
-      navigationBar:  CupertinoNavigationBar(
+      navigationBar: CupertinoNavigationBar(
         leading: const Row(
           children: [
             Icon(CupertinoIcons.back),
@@ -31,30 +32,37 @@ class _HomeScreenState extends State<HomeScreen> {
         trailing: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text("${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!.date?.year}"),
+            Text(
+                "${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!
+                    .date?.year}"),
+            const SizedBox(
+              width: 10,
+            ),
             GestureDetector(
                 onTap: () {
                   showCupertinoModalPopup(
                     context: context,
-                    builder: (context) => SizedBox(
-                      height: 200,
-
-                      child: CupertinoDatePicker(
-                        initialDateTime: ProviderR!.date,
-                        backgroundColor: Colors.white,
-                        onDateTimeChanged: (value) {
-                          ProviderR!.changeDate(value);
-                        },
-                        minimumDate: DateTime(2001),
-                        minimumYear: 2001,
-                        maximumDate: DateTime(2050),
-                        maximumYear: 2050,
-
-                      ),
-                    ),
+                    builder: (context) =>
+                        SizedBox(
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            initialDateTime: ProviderR!.date,
+                            backgroundColor: Colors.white,
+                            onDateTimeChanged: (value) {
+                              ProviderR!.changeDate(value);
+                            },
+                            minimumDate: DateTime(2001),
+                            minimumYear: 2001,
+                            maximumDate: DateTime(2050),
+                            maximumYear: 2050,
+                          ),
+                        ),
                   );
                 },
                 child: const Icon(CupertinoIcons.calendar)),
+            const SizedBox(
+              width: 10,
+            ),
             const Icon(CupertinoIcons.add),
           ],
         ),
@@ -67,18 +75,43 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(
-                height: 20,
-              ),
+            const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
               const Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    "Contacts",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  )),
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Contacts",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Spacer(),
+              Text("${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}"),
+              const SizedBox(
+                height: 10,
+              ),
+                  GestureDetector(onTap: (){
+                    showCupertinoModalPopup(context: context,
+                      builder:(context) => SizedBox(
+                        height: 200,
+                        child: CupertinoDatePicker(
+                          backgroundColor: Colors.white,
+                            initialDateTime: ProviderR!.time,
+                            mode: CupertinoDatePickerMode.time,
+                            use24hFormat: true,
+                            onDateTimeChanged: (value) {
+                              ProviderR!.changeTime(value);
+
+                            },),
+                      ),
+                    );
+                  },child: Icon(CupertinoIcons.time))
+                  ]),
               const SizedBox(
                 height: 20,
               ),
@@ -259,9 +292,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               )
             ],
-          ),
-        ),
-      ),
+          ),)
+        ,
+      )
+      ,
     );
   }
 }

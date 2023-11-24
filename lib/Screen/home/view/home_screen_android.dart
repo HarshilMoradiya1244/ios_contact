@@ -56,7 +56,9 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.person_add_alt)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'info');
+                    }, icon: const Icon(Icons.person_add_alt)),
                 const SizedBox(
                   width: 10,
                 ),
