@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ios_contact/Screen/home/provider/home_screen_provder.dart';
 
 class HomeScreenAndroid extends StatefulWidget {
   const HomeScreenAndroid({super.key});
@@ -37,10 +38,13 @@ class _HomeScreenAndroidState extends State<HomeScreenAndroid> {
                     const SizedBox(
                       width: 10,
                     ),
-                    IconButton(
-                        onPressed: () {
-                            Navigator.pushNamed(context, 'info');
-                        }, icon: const Icon(Icons.more_vert)),
+                   PopupMenuButton(itemBuilder: (context) {
+                     return[
+                       const PopupMenuItem(child: Row(children: [Icon(Icons.call), SizedBox(width: 10,),Text("Call History")],)),
+                       const PopupMenuItem(child: Row(children: [Icon(Icons.settings), SizedBox(width: 10,),Text("Settings")],)),
+                       const PopupMenuItem(child: Row(children: [Icon(Icons.help), SizedBox(width: 10,),Text("Help And FeedBAck")],)),
+                     ];
+                   },)
                   ],
                 ),
               ),

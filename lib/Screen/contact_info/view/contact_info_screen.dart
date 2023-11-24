@@ -24,7 +24,20 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
             ),
           ],
         ),
-        trailing: const Text("Edit", style: TextStyle(color: Colors.blue)),
+        trailing:  CupertinoContextMenu(
+          actions: const [
+            CupertinoContextMenuAction(
+              child: Text("Setting"),
+            ),
+            CupertinoContextMenuAction(
+              child: Text("Share"),
+            ),
+            CupertinoContextMenuAction(
+              child: Text("Help And FeedBack"),
+            ),
+          ],
+          child: const Icon(CupertinoIcons.info),
+        ),
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
         backgroundColor: Colors.white,
       ),

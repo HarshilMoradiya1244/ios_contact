@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ProviderR = context.read<HomeProvider>();
     ProviderW = context.watch<HomeProvider>();
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar:  CupertinoNavigationBar(
         leading: const Row(
           children: [
             Icon(CupertinoIcons.back),
@@ -29,64 +29,33 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         trailing: Row(
-          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            Text("${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!.date?.year}"),
             GestureDetector(
                 onTap: () {
                   showCupertinoModalPopup(
                     context: context,
-                    builder: (context) => CupertinoActionSheet(
-                      actions: [
-                        CupertinoActionSheetAction(
-                          isDestructiveAction: true,
-                          onPressed: () {},
-                          isDefaultAction: true,
-                          child: const Text(
-                            "Add Contact",
-                            style: TextStyle(color: CupertinoColors.link),
-                          ),
-                        ),
-                        CupertinoActionSheetAction(
-                          isDestructiveAction: true,
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          isDefaultAction: false,
-                          child: const Text(
-                            "Cancel",
-                            style: TextStyle(color: CupertinoColors.link),
-                          ),
-                        ),
-                      ],
+                    builder: (context) => SizedBox(
+                      height: 200,
+
+                      child: CupertinoDatePicker(
+                        initialDateTime: ProviderR!.date,
+                        backgroundColor: Colors.white,
+                        onDateTimeChanged: (value) {
+                          ProviderR!.changeDate(value);
+                        },
+                        minimumDate: DateTime(2001),
+                        minimumYear: 2001,
+                        maximumDate: DateTime(2050),
+                        maximumYear: 2050,
+
+                      ),
                     ),
                   );
                 },
-                child: const Icon(CupertinoIcons.add)),
-            const SizedBox(
-              width: 10,
-            ),
-            GestureDetector(
-                onTap: () {}, child: Icon(Icons.more_vert_outlined)),
-            CupertinoButton(
-                child: Text("${ProviderW!.date}"),
-                onPressed: () {
-                showCupertinoDialog(
-                  context: context,
-                  builder:(context) {
-                    return CupertinoDatePicker(
-                      onDateTimeChanged: (value){
-                        ProviderR!.changeDate(value);
-                      },
-                      maximumDate: DateTime(2001),
-                      maximumYear: 2001,
-                      minimumDate: DateTime(2050),
-                      minimumYear: 2050,
-                      initialDateTime: ProviderW!.date,
-                    );
-                  },
-                );
-                })
+                child: const Icon(CupertinoIcons.calendar)),
+            const Icon(CupertinoIcons.add),
           ],
         ),
         // backgroundColor: CupertinoDynamicColor.withBrightness(color: Colors.white, darkColor: Colors.white ),
