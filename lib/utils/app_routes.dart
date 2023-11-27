@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:ios_contact/Screen/dash/view/dash_ios_screen.dart';
 import '../Screen/contact_info/view/contact_info_screen.dart';
 import '../Screen/contact_info/view/contact_info_screen_android.dart';
 import '../Screen/home/view/home_screen.dart';
@@ -9,6 +10,7 @@ Map<String , WidgetBuilder > screen_routes_android = {
   'info':(context) => const ContactInfoScreenAndroid(),
 };
 Map<String , WidgetBuilder > screen_routes_ios = {
+  // '/':(context) => const DashIosScreen(),
   '/':(p0) =>const HomeScreen(),
   'info':(p0) => const ContactInfoscreen(),
 };
