@@ -16,7 +16,6 @@ class _DashIosScreenState extends State<DashIosScreen> {
   DashProvider? providerr;
   DashProvider? providerw;
 
-
   List<Widget> screens = [
     const HomeScreen(),
     const ContactInfoscreen(),
