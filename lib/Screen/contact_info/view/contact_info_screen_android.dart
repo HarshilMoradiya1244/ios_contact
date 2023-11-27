@@ -19,7 +19,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
   Widget build(BuildContext context) {
     ProviderR = context.read<ContactInfoProvider>();
     ProviderW = context.watch<ContactInfoProvider>();
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -147,7 +147,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                         children: [
                           IconButton(onPressed: () {}, icon: const Icon(
                               Icons.phone_outlined)),
-                          const SizedBox(width: 10,),
+                          const SizedBox(width: 6,),
                           const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -236,6 +236,6 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
           ),
         ),
       ),
-    ),);
+    );
   }
 }

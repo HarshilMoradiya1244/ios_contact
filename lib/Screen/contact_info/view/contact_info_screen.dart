@@ -137,7 +137,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
               Column(
                 children: [
                   Container(
-                    height: MediaQuery.sizeOf(context).height * 0.08,
+                    height: MediaQuery.sizeOf(context).height * 0.09,
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -163,7 +163,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     height: 5,
                   ),
                   Container(
-                    height: MediaQuery.sizeOf(context).height * 0.08,
+                    height: MediaQuery.sizeOf(context).height * 0.09,
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -189,7 +189,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                     height: 20,
                   ),
                   Container(
-                    height: MediaQuery.sizeOf(context).height * 0.08,
+                    height: MediaQuery.sizeOf(context).height * 0.09,
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),

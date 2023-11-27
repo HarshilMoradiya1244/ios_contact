@@ -20,7 +20,6 @@ class _DashIosScreenState extends State<DashIosScreen> {
     const HomeScreen(),
     const ContactInfoscreen(),
   ];
-
   @override
   Widget build(BuildContext context) {
 
@@ -36,6 +35,7 @@ class _DashIosScreenState extends State<DashIosScreen> {
                 children: screens,
               ),
               CupertinoTabBar(
+                backgroundColor: CupertinoColors.white,
                 currentIndex: providerr!.stepIndex,
                 onTap: (value) {
                   int i = value;
