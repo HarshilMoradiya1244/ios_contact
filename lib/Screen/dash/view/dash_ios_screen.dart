@@ -7,7 +7,6 @@ import '../provider/dash_provider.dart';
 
 class DashIosScreen extends StatefulWidget {
   const DashIosScreen({super.key});
-
   @override
   State<DashIosScreen> createState() => _DashIosScreenState();
 }
