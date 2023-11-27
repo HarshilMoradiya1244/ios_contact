@@ -33,8 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-                "${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!
-                    .date?.year}",style: const TextStyle(color: Colors.black),),
+              "${ProviderR!.date?.day}/${ProviderR!.date?.month}/${ProviderR!.date?.year}",
+              style: const TextStyle(color: Colors.black),
+            ),
             const SizedBox(
               width: 10,
             ),
@@ -42,21 +43,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   showCupertinoModalPopup(
                     context: context,
-                    builder: (context) =>
-                        SizedBox(
-                          height: 200,
-                          child: CupertinoDatePicker(
-                            initialDateTime: ProviderR!.date,
-                            backgroundColor: Colors.grey.shade500,
-                            onDateTimeChanged: (value) {
-                              ProviderR!.changeDate(value);
-                            },
-                            minimumDate: DateTime(2001),
-                            minimumYear: 2001,
-                            maximumDate: DateTime(2050),
-                            maximumYear: 2050,
-                          ),
-                        ),
+                    builder: (context) => SizedBox(
+                      height: 200,
+                      child: CupertinoDatePicker(
+                        initialDateTime: ProviderR!.date,
+                        backgroundColor: Colors.grey.shade500,
+                        onDateTimeChanged: (value) {
+                          ProviderR!.changeDate(value);
+                        },
+                        minimumDate: DateTime(2001),
+                        minimumYear: 2001,
+                        maximumDate: DateTime(2050),
+                        maximumYear: 2050,
+                      ),
+                    ),
                   );
                 },
                 child: const Icon(CupertinoIcons.calendar)),
@@ -70,47 +70,53 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
       ),
       backgroundColor: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-            const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              const Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Contacts",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Spacer(),
-              Text("Time : ${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}",style: TextStyle(color: Colors.black),),
               const SizedBox(
                 height: 20,
               ),
-                  GestureDetector(onTap: (){
-                    showCupertinoModalPopup(context: context,
-                      builder:(context) => SizedBox(
-                        height: 200,
-                        child: CupertinoDatePicker(
-                          backgroundColor: Colors.grey.shade500,
+              Row(children: [
+                const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Contacts",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const Spacer(),
+                Text(
+                  "Time : ${ProviderR!.time!.hour}:${ProviderW!.time!.minute}:${ProviderW!.time!.second}",
+                  style: TextStyle(color: Colors.black),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                GestureDetector(
+                    onTap: () {
+                      showCupertinoModalPopup(
+                        context: context,
+                        builder: (context) => SizedBox(
+                          height: 200,
+                          child: CupertinoDatePicker(
+                            backgroundColor: Colors.grey.shade500,
                             initialDateTime: ProviderR!.time,
                             mode: CupertinoDatePickerMode.time,
                             use24hFormat: true,
                             onDateTimeChanged: (value) {
                               ProviderR!.changeTime(value);
-                            },),
-                      ),
-                    );
-                  },child: const Icon(CupertinoIcons.time)),
-                  ]),
+                            },
+                          ),
+                        ),
+                      );
+                    },
+                    child: const Icon(CupertinoIcons.time)),
+              ]),
               const SizedBox(
                 height: 20,
               ),
@@ -286,15 +292,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     thickness: 1,
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 50,
                   ),
                 ],
               )
             ],
-          ),)
-        ,
-      )
-      ,
+          ),
+        ),
+      ),
     );
   }
 }
