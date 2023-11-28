@@ -21,7 +21,7 @@ void main() {
           create: (context) => DashProvider(),
         ),
       ],
-      child:  Platform.isAndroid? MaterialApp(
+      child:  Platform.isIOS? MaterialApp(
         theme: ThemeData(useMaterial3: true),
           debugShowCheckedModeBanner: false,
           routes: screen_routes_android

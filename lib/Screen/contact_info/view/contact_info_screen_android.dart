@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ios_contact/Screen/contact_info/provider/contac_info_provider.dart';
 import 'package:ios_contact/Screen/home/provider/home_screen_provder.dart';
@@ -127,7 +128,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
               Container(
                 height: MediaQuery
                     .sizeOf(context)
-                    .height * 0.50,
+                    .height * 0.60,
                 width: MediaQuery
                     .sizeOf(context)
                     .width,
@@ -227,7 +228,7 @@ class _ContactInfoScreenAndroidState extends State<ContactInfoScreenAndroid> {
                             ProviderR!.changeTime(d2!);
                           }, icon: const Icon(Icons.timer_outlined),),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),

@@ -9,6 +9,9 @@ class ContactInfoscreen extends StatefulWidget {
 }
 
 class _ContactInfoscreenState extends State<ContactInfoscreen> {
+  double _currentSliderValue = 0.0;
+  String? _sliderStatus;
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -213,8 +216,28 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
+              CupertinoSlider(
+                key: const Key('slider'),
+                value: _currentSliderValue,
+                divisions: 5,
+                max: 100,
+                activeColor: CupertinoColors.systemPurple,
+                thumbColor: CupertinoColors.systemPurple,
+                onChangeStart: (double value) {
+                  setState(() {
+                    _sliderStatus = 'Sliding';
+                  });
+                },
+                onChangeEnd: (double value) {
+                  setState(() {
+                    _sliderStatus = 'Finished sliding';
+                  });
+                },
+                onChanged: (double value) {
+                  setState(() {
+                    _currentSliderValue = value;
+                  });
+                },
               ),
               Container(
                 height: MediaQuery.sizeOf(context).height * 0.15,
