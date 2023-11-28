@@ -6,6 +6,8 @@ class ContactInfoProvider with ChangeNotifier {
   DateTime? date = DateTime.now();
   TimeOfDay? time = TimeOfDay.now();
 
+
+
   void changeDate(DateTime? d1){
     date = d1;
     notifyListeners();

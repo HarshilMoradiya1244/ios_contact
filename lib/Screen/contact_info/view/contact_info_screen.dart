@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ios_contact/Screen/contact_info/provider/contac_info_provider.dart';
+import 'package:provider/provider.dart';
 
 class ContactInfoscreen extends StatefulWidget {
   const ContactInfoscreen({super.key});
@@ -9,18 +11,19 @@ class ContactInfoscreen extends StatefulWidget {
 }
 
 class _ContactInfoscreenState extends State<ContactInfoscreen> {
+  ContactInfoProvider?  ProviderR;
+  ContactInfoProvider?  ProviderW;
   double _currentSliderValue = 0.0;
-  String? _sliderStatus;
 
   @override
   Widget build(BuildContext context) {
+    ProviderR= context.read<ContactInfoProvider>();
+    ProviderW= context.watch<ContactInfoProvider>();
     return CupertinoPageScaffold(
       navigationBar:  CupertinoNavigationBar(
         leading: Row(
           children: [
-            GestureDetector(   onTap: (){
-              Navigator.pop(context, 'info');
-            },child: const Icon(CupertinoIcons.back)),
+            GestureDetector(   onTap: (){},child: const Icon(CupertinoIcons.back)),
             const Text(
               "Contact",
               style: TextStyle(color: Colors.blue),
@@ -223,21 +226,7 @@ class _ContactInfoscreenState extends State<ContactInfoscreen> {
                 max: 100,
                 activeColor: CupertinoColors.systemPurple,
                 thumbColor: CupertinoColors.systemPurple,
-                onChangeStart: (double value) {
-                  setState(() {
-                    _sliderStatus = 'Sliding';
-                  });
-                },
-                onChangeEnd: (double value) {
-                  setState(() {
-                    _sliderStatus = 'Finished sliding';
-                  });
-                },
-                onChanged: (double value) {
-                  setState(() {
-                    _currentSliderValue = value;
-                  });
-                },
+                onChanged: (double value) {},
               ),
               Container(
                 height: MediaQuery.sizeOf(context).height * 0.15,
