@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ios_contact/Screen/contact_info/view/contact_info_screen_android.dart';
 import 'package:ios_contact/Screen/home/view/home_screen_android.dart';
+import 'package:ios_contact/Screen/profile/view/profilr_screen_android.dart';
 import 'package:provider/provider.dart';
 import '../provider/dash_provider.dart';
 
@@ -18,6 +19,7 @@ class _DashAndroidScreenState extends State<DashAndroidScreen> {
   List<Widget> screen = [
     const HomeScreenAndroid(),
     const ContactInfoScreenAndroid(),
+    const ProfileScreenAndroid(),
   ];
 
   @override
@@ -25,7 +27,7 @@ class _DashAndroidScreenState extends State<DashAndroidScreen> {
     providerr = context.read<DashProvider>();
     providerw = context.watch<DashProvider>();
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Align(
@@ -42,6 +44,9 @@ class _DashAndroidScreenState extends State<DashAndroidScreen> {
             tabs: const [
               Tab(
                 icon: Icon(Icons.recent_actors),
+              ),
+              Tab(
+                icon: Icon(Icons.contact_emergency),
               ),
               Tab(
                 icon: Icon(Icons.person_2),
